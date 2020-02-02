@@ -51,10 +51,8 @@ window.renderStatistics = function (ctx, names, times) {
   for (var i = 0; i < names.length; i++) {
     times[i] = Math.round(times[i]);
 
-    ctx.fillStyle = 'hsl(240, ' + getRandomInt(75) + '%, 50%)';
-    if (!ctx.fillStyle === 'hsl(240, 100%, 50%)') {
-      ctx.fillStyle = 'hsl(240, 100%, 50%)';
-    } if (names[i] === 'Вы') {
+    ctx.fillStyle = 'hsl(240, ' + getRandomInt(100) + '%, 50%)';
+    if (names[i] === 'Вы') {
       ctx.fillStyle = 'rgba(255, 0, 0, 1)';
     }
     ctx.fillRect(CLOUD_X + BAR_WIDTH + (BAR_SPACE + BAR_WIDTH) * i, (GAP + FONT_GAP) * 3 + LITLE_GAP + GAP - BAR_HEIGHT, BAR_WIDTH, (BAR_HEIGHT * times[i]) / maxTime);
