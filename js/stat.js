@@ -56,7 +56,7 @@ window.renderStatistics = function (ctx, names, times) {
     if (names[i] === 'Вы') {
       ctx.fillStyle = 'rgba(255, 0, 0, 1)';
     }
-    ctx.fillRect(barX, (GAP + FONT_GAP) * 3 + LITLE_GAP + GAP - BAR_HEIGHT, BAR_WIDTH, (BAR_HEIGHT * times[i]) / maxTime);
+    ctx.fillRect(barX, (GAP + FONT_GAP) * 3 + LITLE_GAP + GAP - BAR_HEIGHT, BAR_WIDTH, (BAR_HEIGHT * time) / maxTime);
 
     ctx.fillStyle = '#000';
     ctx.fillText(time, barX, CLOUD_HEIGHT + BAR_HEIGHT * time / maxTime - GAP * 3);
